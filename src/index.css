@@ -1,0 +1,339 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbars for all elements while maintaining scroll functionality */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* COMPREHENSIVE FOCUS REMOVAL - Remove ALL focus styles */
+*,
+*:before,
+*:after,
+*:focus,
+*:focus-within,
+*:focus-visible,
+*:active,
+button,
+button:focus,
+button:focus-within,
+button:focus-visible,
+button:active,
+input,
+input:focus,
+input:focus-within,
+input:focus-visible,
+input:active,
+textarea,
+textarea:focus,
+textarea:focus-within,
+textarea:focus-visible,
+textarea:active,
+select,
+select:focus,
+select:focus-within,
+select:focus-visible,
+select:active,
+a,
+a:focus,
+a:focus-within,
+a:focus-visible,
+a:active,
+[tabindex],
+[tabindex]:focus,
+[tabindex]:focus-within,
+[tabindex]:focus-visible,
+[tabindex]:active,
+[role="button"],
+[role="button"]:focus,
+[role="button"]:focus-within,
+[role="button"]:focus-visible,
+[role="button"]:active {
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  outline-color: transparent !important;
+  box-shadow: none !important;
+  border-color: inherit !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Remove default browser focus rings */
+:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+}
+
+:focus-visible {
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+}
+
+:focus-within {
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove focus styles from form elements */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+  border-color: inherit !important;
+}
+
+/* Remove focus styles from interactive elements */
+[tabindex]:focus,
+[role="button"]:focus,
+[contenteditable]:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection for inputs and text areas */
+input,
+textarea,
+[contenteditable] {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Remove blue highlight on mobile tap */
+button,
+a,
+[role="button"],
+[tabindex] {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Remove any remaining focus indicators */
+button::-moz-focus-inner {
+  border: 0 !important;
+  outline: none !important;
+}
+
+/* Remove focus from specific HTML5 elements */
+details:focus,
+summary:focus {
+  outline: none !important;
+}
+
+/* REMOVE ALL CARD BORDERS - Target all card-like components */
+.bg-white,
+.dark\:bg-gray-800,
+.bg-gray-50,
+.dark\:bg-gray-700,
+.bg-gray-100,
+.dark\:bg-gray-600,
+[class*="bg-white"],
+[class*="bg-gray"],
+[class*="rounded"],
+.border,
+[class*="border-"],
+div[class*="border"],
+button[class*="border"],
+input[class*="border"],
+textarea[class*="border"],
+select[class*="border"] {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+}
+
+/* Remove borders from specific Tailwind classes */
+.border-gray-200,
+.dark\:border-gray-700,
+.border-gray-300,
+.dark\:border-gray-600,
+.border-gray-100,
+.dark\:border-gray-800,
+.border-purple-200,
+.dark\:border-purple-800,
+.border-blue-200,
+.dark\:border-blue-800,
+.border-green-200,
+.dark\:border-green-800,
+.border-red-200,
+.dark\:border-red-800,
+.border-yellow-200,
+.dark\:border-yellow-800,
+.border-orange-200,
+.dark\:border-orange-800 {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+}
+
+/* Remove borders from rounded elements */
+.rounded,
+.rounded-lg,
+.rounded-xl,
+.rounded-2xl,
+.rounded-3xl,
+.rounded-full {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+}
+
+/* Remove borders from modal and overlay elements */
+.modal-content,
+.backdrop-blur,
+[class*="backdrop-blur"],
+.shadow,
+[class*="shadow"],
+.z-50,
+[class*="z-"] {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+}
+
+/* Ensure modals and overlays don't show scrollbars */
+.modal-content,
+.overflow-y-auto,
+.overflow-x-auto,
+.overflow-auto {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.modal-content::-webkit-scrollbar,
+.overflow-y-auto::-webkit-scrollbar,
+.overflow-x-auto::-webkit-scrollbar,
+.overflow-auto::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure chat interface scrolling is smooth without scrollbars */
+.chat-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chat-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbars on mobile devices */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  *::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Ensure dropdown menus don't show scrollbars */
+.dropdown-menu {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+  display: none;
+}
+
+/* Remove any Tailwind focus styles that might be applied */
+.focus\:outline-none:focus {
+  outline: none !important;
+}
+
+.focus\:ring-0:focus {
+  box-shadow: none !important;
+}
+
+.focus\:ring-transparent:focus {
+  box-shadow: none !important;
+}
+
+/* Override any component-specific focus styles */
+[class*="focus:"]:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove focus from React components */
+[data-focus]:focus,
+[data-focus-visible]:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove borders from all divs and containers */
+div {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+}
+
+/* Remove borders from all interactive elements */
+button,
+input,
+textarea,
+select,
+a {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+}
+
+/* Force remove any remaining borders */
+* {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+}
